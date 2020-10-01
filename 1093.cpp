@@ -19,7 +19,7 @@
 #define size_2d 1000
 #define rep(i,v,n) for(ll i = v; i < n; i++)
 //Snippets: delta, sieve, fastexp, dfs, bfs, dijkstra, floodfill
-
+#define MY_VAR 100000
 using namespace std;
 
 ll n;
