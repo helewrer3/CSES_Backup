@@ -30,10 +30,10 @@ void Input() {
 
 void Solve() {
 	vll a(n);
-	for (ll i = 0; i < n; i++) cin >> a[i];
+	for (int i = 0; i < n; i++) cin >> a[i];
 	mll mp;
 	mp[0] = 1;
-	for (ll i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) {
 		auto it = mp.rbegin();
 		while (it != mp.rend()) {
 			mp[a[i] + it->f] = 1;
@@ -41,15 +41,19 @@ void Solve() {
 		}
 	}
 	vll ans;
-	for (auto it : mp)ans.pb(it.f);
-	cout << ans.size() - 1 << endl;
-	for (auto it : ans)if (it)cout << it << " ";
+	for (auto it : mp)
+	    ans.pb(it.f);
+	cout << (int)ans.size() - 1 << "\n";
+	for (auto it : ans) 
+	    if (it) 
+	        cout << it << " ";
+	cout << "\n";
 }
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-
+	cin.sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);
 	ll T = 1;
 	//cin >> T;
 	//ll t = 1;
